@@ -18,34 +18,39 @@
     	html, body{
     		height: 100%;
     	}
-#container{
-	min-height: 100%;
-}
-#main-session{
-	overflow: auto;
-	margin-top: 80px;
-	text-align: center;
-	
-}
 
-.nav {
+
+.header {
 		
-		background-color: black;
-		position: fixed;
-		top: 0;
-		left: 0;
-		right: 0;
-		padding: 20px;
+		
+		
+		
 
 	}	
 
-.nav-link ul {
-     float: right;
-	display: inline-flex;
+.nav{
+    background-color:#222F28;
+    position: sticky;
+		top: 0;
+		left: 0;
+		right: 0;
+        padding: 20px;
+	display:flex;
 	
-	list-style: none;
 }
-.nav-link a {
+
+.ul-link{
+
+   width: 90%; 
+   height: 100%;
+}
+ .ul-link ul {
+display: flex;
+justify-content:flex-end;
+
+list-style: none;
+ }
+.ul-link a {
 
 	text-decoration: none;
 	margin: 10px;
@@ -54,46 +59,143 @@
 	padding: 20px;
 }
 
-.nav a:hover {
+.ul-link a:hover {
   background: #ddd;
   color: black;
 }
 
-form {
-	max-width:800px;
-    background-color:#E5E5E5;
-    margin:0 auto;
-	padding: 20px;
-	border-radius:5px;
-    box-shadow:2px 8px 10px  #00AAFF;
+.logo{
+    width: 10%;
+    height: 100%;
+}
+img{
+    
+  width: 23%;
+  height: auto;
+}
+.back-img{
+      background-image: url(9.jpeg);
+      background-size: cover;
+      height: 607px;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+.prof {
+    
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   margin-right: -50%;
+   transform: translate(-50%, -50%)
+}
+.prof h1 {
+    font-size: 60px;
+}
+.prof p {
+    font-size: 30px;
+}
+.prof button{
+    padding: 10px; 
+    background-color: #00AAFF;
+    border-radius: 50px;
+    border-color: black;
+}
+.prof a{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    
+    padding: 10px;
 }
 
-label {
-	display: block;
-	padding: 10px;
+.back-img::after {
+
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color:black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .9;
+    z-index: 0;
+
+}
+.back-img{
+    position: relative;
+}
+.back-img >* {
+z-index: 10;
+position: relative;
+
 }
 
-.control-form {
-
-	text-align: left;
-	margin-top:5px;
+.comp-logo{
+    background-color: #222F28;
+    color: white;
+    padding: 40px;
+    text-align: center;
 }
-.control-form input, .control-form textarea ,.control-form button{
+.logos{
+    display: flex;
+    float: right;
+}
+.logo1{
+    width: 30%;
+  height: auto;
 
-	display: block;
-	width:100%;
-    padding:5px;
-    border-radius:3px;
-    border-color:#00AAFF;
+}
 
+#container{
+	min-height: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+#main-session{
+	
+	width: 60%;
+    height: 60%;
+    margin-top: 30px;
+    
 	
 }
 
-.control-form button{
-	margin-top: 10px;
-	background-color: #00AAFF;
-	font-size: 20px; 
+.subs{
+    background-color:#00AAFF;
+    padding: 30px;
+    text-align: center;
+    color: white;
 }
+
+.subs h4{
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+.subs button{
+    background-color: white;
+    padding: 13px;
+    border-radius: 10px;
+}
+.subs a{
+    text-decoration: none;
+    color:black;
+    font-weight: bold ;
+}
+.subs input {
+    padding: 13px;
+    border-radius: 10px;
+    width: 500px;
+}
+
+
+
+
+
+
 
 
 #footer {
@@ -133,72 +235,85 @@ label {
 
 <body>
 
-	<header class="nav">
+	<header class="header">
 
-		<nav class="nav-link">
-			
-			<ul>
-				<li><a href="#">Home</a></li> 
+		<nav class="nav">
+
+            <div class="logo">
+
+                <img src="logo.png" alt="logo">
+              
+            </div>
+
+
+			<div class="ul-link">
+			  <ul>
+				<li><a href="index.html">Home</a></li> 
 				<li><a href="#">About</a></li>
 				<li><a href="#">Work</a></li>
-				<li><a href="#">Contact</a></li>
+				<li><a href="contact.html">Contact</a></li>
 				<li><a href="#">My process</a></li>
-			</ul>
+              </ul>
+            </div>
 	
-		</nav>
+        </nav>
+        
+        <div class="back-img">
+        <div class="prof">
+           <h1>Software Developer</h1>
+           <p>Bring your dreams into reality</p>
+           <button class="previous-work"><a href="#">My previous work</a></button>
+           <a href="#"></a>
+        </div>
+        </div>
+
+        <div class="comp-logo">
+                <h1>Companies, I worked with</h1>
+                <div class="logos">
+            <div class="logo1">
+                <img src="logo2.png" alt="logos" >
+            </div>
+            <div class="logo2">
+                <img src="logo3.png" alt="logo" >
+            </div>
+            <div class="logo3">
+                <img src="logo4.png" alt="logo" >
+            </div>
+              </div>
+
+        </div>
 	
 	</header>
 	
 	<div id="container">
-		
+		<h1>Achievements!</h1>
 		<div id="main-session">
+
+            <div class="first">
+                <img src="work1.jpg" alt="work" >
+            </div>
+            <div class="second">
+                <img src="work2.jpg" alt="work" >
+            </div>
 			
-			<h1>Contact us!</h1>
-	
-	<form >
-	
-		<div class="control-form">
-			 <div>
-			<label>First Name</label>
+            
+            
+
 	
 	
-			<input type="tex" name="first name" placeholder="Enter your first name" required>
-			  </div>
-	
-			  <div >
-			<label>Last Name</label>
-			<input type="tex" name="last name" placeholder="Enter your last name" required>
-			 </div>
-	
-			  <div>
-			<label>Email</label>
-			<input type="tex" name="email" placeholder="Enter your email" required>
-			 </div>
-	
-			 <div>
-			<label>Phone Number</label>
-			<input type="tex" name="last name" placeholder="Enter your phone number" required>
-			 </div>
-	
-			 <div>
-			<label>Your message</label>
-			<textarea rows="4" cols="20" name="comment" > Enter text here...</textarea>
-			 </div>
-			  
-			<button type="submit"> Submit</button>
-	
-	
-			
-	</div>
-	
-		</form>
 	
 	
 	
 	
 		</div>
 	</div>
-	
+	<section class="subs">
+        <h4>For free first mobile application</h4>
+        <button><a href="#">Subscribe</a></button>
+        <input type="text" placeholder="Enter your email please!"></input>
+
+
+    </section>
 	<footer id="footer">
 		
 	
