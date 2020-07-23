@@ -1,37 +1,335 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>My Brand</title>
     <style >
-    body{
-        background-color: #867272;
-    }
-    .head-title {
-                  color: rgb(247, 242, 242);
-                  background-color: rgb(12, 12, 12);
-                text-align: center;
-                position: fixed;
-                left: 0;
-                top: 0;
-                right: 0;
-    }
+    *{
+    		margin: 0px;
+    		padding: 0px;
+    	}
+
+    	*{
+  box-sizing:border-box;
+}
+
+
+    	html, body{
+    		height: 100%;
+    	}
+
+
+.header {
+		
+		
+		
+		
+
+	}	
+
+.nav{
+    background-color:#222F28;
+    position: sticky;
+		top: 0;
+		left: 0;
+		right: 0;
+        padding: 20px;
+	display:flex;
+	
+}
+
+.ul-link{
+
+   width: 90%; 
+   height: 100%;
+}
+ .ul-link ul {
+display: flex;
+justify-content:flex-end;
+
+list-style: none;
+ }
+.ul-link a {
+
+	text-decoration: none;
+	margin: 10px;
+	color: white;
+	font-size: 17px;
+	padding: 20px;
+}
+
+.ul-link a:hover {
+  background: #ddd;
+  color: black;
+}
+
+.logo{
+    width: 10%;
+    height: 100%;
+}
+img{
+    
+  width: 23%;
+  height: auto;
+}
+
+.prof {
+    
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   margin-right: -50%;
+   transform: translate(-50%, -50%)
+}
+.prof h1 {
+    font-size: 60px;
+}
+.prof p {
+    font-size: 30px;
+}
+.prof button{
+    padding: 10px; 
+    background-color: #00AAFF;
+    border-radius: 50px;
+    border-color: black;
+}
+.prof a{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    
+    padding: 10px;
+}
+.back-img{
+      background-image: url(9.jpeg);
+      background-size: cover;
+      height: 607px;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.back-img::after {
+
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color:black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .9;
+    z-index: 0;
+
+}
+.back-img{
+    position: relative;
+}
+.back-img >* {
+z-index: 10;
+position: relative;
+
+}
+
+.comp-logo{
+    background-color: #222F28;
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+.logos{
+    display: flex;
+    float: right;
+}
+.logo1{
+    width: 30%;
+  height: auto;
+
+}
+
+#container{
+	min-height: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+#main-session{
+	
+	width: 100%;
+    height: 100%;
+    margin-top: 30px;
+    
+	
+}
+
+.subs{
+    background-color:#00AAFF;
+    padding: 30px;
+    text-align: center;
+    color: white;
+}
+
+.subs h4{
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+.subs button{
+    background-color: white;
+    padding: 13px;
+    border-radius: 10px;
+}
+.subs a{
+    text-decoration: none;
+    color:black;
+    font-weight: bold ;
+}
+.subs input {
+    padding: 13px;
+    border-radius: 10px;
+    width: 500px;
+}
+
+
+
+
+
+
+
+
+#footer {
+	background-color: black;
+	color: white;
+	position: relative;
+	
+	text-align: center;
+	clear: both;
+}
+
+#footer ul {
+
+	display: inline-flex;
+	padding: 10px;
+	list-style: none;
+
+}
+
+#footer li{
+	margin: 9px;
+}
+
+#footer a{
+
+
+	text-decoration: none;
+		color: white;
+	font-size: 17px;
+	
+}
+
+
+
     </style>
 </head>
 
 <body>
 
-<header>
-    <div class="head-title">
-        <h1>
-            This is My First personal Website
-        </h1>
-        <h1 style="color:skyblue"> Mr NKUBITO Is Here</h1>
-        <p>God,I need your help</p>
-        <p>God,I need your handa</p>
+	<header class="header">
+
+		<nav class="nav">
+
+            <div class="logo">
+
+                <img src="logo.png" alt="logo">
+              
+            </div>
+
+
+			<div class="ul-link">
+			  <ul>
+				<li><a href="index.html">Home</a></li> 
+				<li><a href="#">About</a></li>
+				<li><a href="#">Work</a></li>
+				<li><a href="contact.html">Contact</a></li>
+				<li><a href="#">My process</a></li>
+              </ul>
+            </div>
+	
+        </nav>
         
-    </div>
-</header>
+        <div class="back-img">
+        <div class="prof">
+           <h1>Software Developer</h1>
+           <p>Bring your dreams into reality</p>
+           <button class="previous-work"><a href="#">My previous work</a></button>
+           <a href="#"></a>
+        </div>
+        </div>
+
+        <div class="comp-logo">
+                <h1>Companies, I worked with</h1>
+                <div class="logos">
+            <div class="logo1">
+                <img src="logo2.png" alt="logos" >
+            </div>
+            <div class="logo2">
+                <img src="logo3.png" alt="logo" >
+            </div>
+            <div class="logo3">
+                <img src="logo4.png" alt="logo" >
+            </div>
+              </div>
+
+        </div>
+	
+	</header>
+	
+	<div id="container">
+		<h1>Achievements!</h1>
+		<div id="main-session">
+
+            <div class="first">
+                <img src="work1.jpg" alt="work" >
+            </div>
+            <div class="second">
+                <img src="work2.jpg" alt="work" >
+            </div>
+			
+            
+            
+
+	
+	
+	
+	
+	
+	
+		</div>
+	</div>
+	<section class="subs">
+        <h4>For free first mobile application</h4>
+        <button><a href="#">Subscribe</a></button>
+        <input type="text" placeholder="Enter your email please!"></input>
+
+
+    </section>
+	<footer id="footer">
+		
+	
+		<ul>
+			
+			<li><a href="#"> Team</a></li>
+				<li><a href="#">contact</a></li>
+		</ul>
+				
+				
+			
+	
+	
+	</footer>
+	
 
 
 
