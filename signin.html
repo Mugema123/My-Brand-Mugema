@@ -60,7 +60,7 @@
 }
 
 form {
-	max-width:800px;
+	max-width:500px;
     background-color:#E5E5E5;
     margin:0 auto;
 	padding: 20px;
@@ -88,13 +88,19 @@ label {
 
 	
 }
-
+.control-form input [type= checkbox] {
+    float: left;
+    margin-top: 100px;
+}
 .control-form button{
 	margin-top: 10px;
 	background-color: #00AAFF;
 	font-size: 20px; 
 }
 
+.control-form a{
+    text-decoration: none;
+}
 
 #footer {
 	background-color: black;
@@ -139,7 +145,7 @@ label {
 			
 			<ul>
 				<li><a href="index.html">Home</a></li> 
-				<li><a href="#">About</a></li>
+				<li><a href="About.html">About</a></li>
 				<li><a href="signup.html">Register</a></li>
 				<li><a href="signin.html">Log-in</a></li>
 				<li><a href="contact.html">Contact</a></li>
@@ -154,39 +160,36 @@ label {
 		
 		<div id="main-session">
 			
-			<h1>Contact us!</h1>
+			<h1>Sign in</h1>
 	
 	<form >
 	
 		<div class="control-form">
 			 <div>
-			<label>First Name</label>
+			<label>Username</label>
 	
 	
-			<input type="tex" name="first name" placeholder="Enter your first name" required>
+			<input type="text" name="username" placeholder="Enter your Username" required>
 			  </div>
 	
-			  <div >
-			<label>Last Name</label>
-			<input type="tex" name="last name" placeholder="Enter your last name" required>
-			 </div>
+			  
 	
 			  <div>
-			<label>Email</label>
-			<input type="tex" name="email" placeholder="Enter your email" required>
+			<label>Password</label>
+			<input type="text" name="password" placeholder="Enter your Password" required>
 			 </div>
 	
+			 
 			 <div>
-			<label>Phone Number</label>
-			<input type="tex" name="last name" placeholder="Enter your phone number" required>
-			 </div>
-	
-			 <div>
-			<label>Your message</label>
-			<textarea rows="4" cols="20" name="comment" > Enter text here...</textarea>
+                <input type="checkbox"  name="remember" value="remember">
+			<label>Remember me</label>
+			
 			 </div>
 			  
-			<button type="submit"> Submit</button>
+            <button type="submit"> Sign in</button>
+            
+            <label>OR</label>
+            <p><span><a href="signup.html">Create an account</a></span> | <span><a href="#">Forget password</a></span></p>
 	
 	
 			

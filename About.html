@@ -21,11 +21,29 @@
 #container{
 	min-height: 100%;
 }
-#main-session{
-	overflow: auto;
+.main-session{
 	margin-top: 80px;
-	text-align: center;
+    display: flex;
 	
+}
+.main-session img {
+
+    margin-left: 150px;
+    width: 50%;
+    
+}
+
+.photo{
+    width: 50%;
+}
+
+.title {
+   width: 50%;
+    margin-left: 100px;
+    
+}
+.title h2 {
+    margin-bottom: 20px;
 }
 
 .nav {
@@ -60,7 +78,7 @@
 }
 
 form {
-	max-width:800px;
+	max-width:500px;
     background-color:#E5E5E5;
     margin:0 auto;
 	padding: 20px;
@@ -88,13 +106,19 @@ label {
 
 	
 }
-
+.control-form input [type= checkbox] {
+    float: left;
+    margin-top: 100px;
+}
 .control-form button{
 	margin-top: 10px;
 	background-color: #00AAFF;
 	font-size: 20px; 
 }
 
+.control-form a{
+    text-decoration: none;
+}
 
 #footer {
 	background-color: black;
@@ -139,7 +163,7 @@ label {
 			
 			<ul>
 				<li><a href="index.html">Home</a></li> 
-				<li><a href="#">About</a></li>
+				<li><a href="About.html">About</a></li>
 				<li><a href="signup.html">Register</a></li>
 				<li><a href="signin.html">Log-in</a></li>
 				<li><a href="contact.html">Contact</a></li>
@@ -152,47 +176,39 @@ label {
 	
 	<div id="container">
 		
-		<div id="main-session">
+		<div class="main-session">
+
+            <div class="title">
+               
+                <h2> About Mugema</h2>
+                
+                <p>
+                    Mugema is a passionate, inspiring and successful full stack Software Developer. 
+                    reate something new and generate ample ideas. He designs with high proficiencies in problem-solving.
+                </p>
+<br><br>
+                <p>
+                    Known as a UI and UX genius with a unique skill-set that spans from 
+                    front-end to back-end with different programming languages.
+                </p>
+                <br><br>
+                <p>
+
+                    Mugema is highly effective full stack developer with exceptional 
+                    
+                    problem-solving skills, a true visionary person making 
+                    him an asset to any product development organisation.
+                </p>
+
+             </div>
 			
-			<h1>Contact us!</h1>
-	
-	<form >
-	
-		<div class="control-form">
-			 <div>
-			<label>First Name</label>
-	
-	
-			<input type="tex" name="first name" placeholder="Enter your first name" required>
-			  </div>
-	
-			  <div >
-			<label>Last Name</label>
-			<input type="tex" name="last name" placeholder="Enter your last name" required>
-			 </div>
-	
-			  <div>
-			<label>Email</label>
-			<input type="tex" name="email" placeholder="Enter your email" required>
-			 </div>
-	
-			 <div>
-			<label>Phone Number</label>
-			<input type="tex" name="last name" placeholder="Enter your phone number" required>
-			 </div>
-	
-			 <div>
-			<label>Your message</label>
-			<textarea rows="4" cols="20" name="comment" > Enter text here...</textarea>
-			 </div>
-			  
-			<button type="submit"> Submit</button>
-	
-	
-			
-	</div>
-	
-		</form>
+			<div class="photo">
+                <img src="mugema.jpg" alt="mugema-photo" >
+            </div>
+
+           
+            
+              
 	
 	
 	
