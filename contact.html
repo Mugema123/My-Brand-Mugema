@@ -154,39 +154,37 @@ label {
 		
 		<div id="main-session">
 			
-			<h1>Contact us!</h1>
+			<h1 >Contact us!</h1>
 	
-	<form >
+	<form name="myForm"  action="/" onsubmit="return validateForm()" method="get">
 	
 		<div class="control-form">
 			 <div>
-			<label>First Name</label>
-	
-	
-			<input type="tex" name="first name" placeholder="Enter your first name" required>
+			<label for="firstName">First Name</label>
+			<input type="text"  name="firstName" placeholder="Enter your first name" >
 			  </div>
 	
 			  <div >
-			<label>Last Name</label>
-			<input type="tex" name="last name" placeholder="Enter your last name" required>
+			<label for="lastName">Last Name</label>
+			<input type="text" name="lastName" placeholder="Enter your last name" >
 			 </div>
 	
 			  <div>
-			<label>Email</label>
-			<input type="tex" name="email" placeholder="Enter your email" required>
+			<label for="email">Email</label>
+			<input type="text" name="email" placeholder="Enter your email" >
 			 </div>
 	
 			 <div>
-			<label>Phone Number</label>
-			<input type="tex" name="last name" placeholder="Enter your phone number" required>
+			<label for="phoneNumber">Phone Number</label>
+			<input type="text" name="phoneNumber" placeholder="Enter your phone number" >
 			 </div>
 	
 			 <div>
-			<label>Your message</label>
-			<textarea rows="4" cols="20" name="comment" > Enter text here...</textarea>
+			<label for="textarea">Your message</label>
+			<textarea name="textarea"  rows="4" cols="20" name="comment" > Enter text here...</textarea>
 			 </div>
 			  
-			<button type="submit"> Submit</button>
+			<button type="submit" value="submit"> Submit</button>
 	
 	
 			
@@ -215,8 +213,10 @@ label {
 	
 	</footer>
 	
+	<script src="main.js">
+		
+		</script>
 
-
-
+	
 </body>
 </html>
