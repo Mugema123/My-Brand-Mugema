@@ -100,14 +100,14 @@ function validateForm() {
     
     function message(text)
     { 
-    var area = /^[A-Za-z]+$/;
+    var area = /^[0-9a-zA-Z]+$/;
     if(text.value.match(area))
     {
     return true;
     }
     else
     {
-    alert('textarea  must be filled out and have alphabet characters only');
+    alert('textarea  must be filled out and have alphabet and numeric characters only');
     text.focus();
     return false;
     }
