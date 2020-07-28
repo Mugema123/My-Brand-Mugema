@@ -74,7 +74,7 @@ function validateForm() {
     }
     else
     {
-    alert("You have entered an invalid email address!");
+    alert("You have entered an invalid email address! (example@gmail.com)");
     mail.focus();
     return false;
     }
