@@ -139,11 +139,11 @@ label {
 			
 			<ul>
 				<li><a href="index.html">Home</a></li> 
-				<li><a href="#">About</a></li>
+				<li><a href="About.html">About</a></li>
 				<li><a href="signup.html">Register</a></li>
 				<li><a href="signin.html">Log-in</a></li>
 				<li><a href="contact.html">Contact</a></li>
-				<li><a href="#">Process</a></li>
+				<li><a href="#">My process</a></li>
 			</ul>
 	
 		</nav>
@@ -154,39 +154,38 @@ label {
 		
 		<div id="main-session">
 			
-			<h1>Contact us!</h1>
+			<h1 >Contact us!</h1>
 	
-	<form >
+	<form name="myForm"  action="/" onsubmit="return validateForm()" method="get">
 	
 		<div class="control-form">
 			 <div>
-			<label>First Name</label>
-	
-	
-			<input type="tex" name="first name" placeholder="Enter your first name" required>
+			<label for="firstName">First Name</label>
+			<input type="text"  name="firstName" placeholder="Enter your first name" >
 			  </div>
 	
 			  <div >
-			<label>Last Name</label>
-			<input type="tex" name="last name" placeholder="Enter your last name" required>
+			<label for="lastName">Last Name</label>
+			<input type="text" name="lastName" placeholder="Enter your last name" >
 			 </div>
 	
 			  <div>
-			<label>Email</label>
-			<input type="tex" name="email" placeholder="Enter your email" required>
+			<label for="email">Email</label>
+			<input type="text" name="email" placeholder="Enter your email" >
 			 </div>
 	
 			 <div>
-			<label>Phone Number</label>
-			<input type="tex" name="last name" placeholder="Enter your phone number" required>
+			<label for="phoneNumber">Phone Number</label>
+			<input type="text" name="phoneNumber" placeholder="Enter your phone number" >
 			 </div>
 	
 			 <div>
-			<label>Your message</label>
-			<textarea rows="4" cols="20" name="comment" > Enter text here...</textarea>
+			<label for="textarea">Your message</label>
+			<textarea name="textarea"  rows="4" cols="20" name="comment" placeholder="Enter your message"> </textarea>
 			 </div>
 			  
-			<button type="submit"> Submit</button>
+			<button type="submit" value="submit"> Submit</button>
+			<input type="reset" value="Reset" name="Reset"> 
 	
 	
 			
@@ -205,7 +204,7 @@ label {
 	
 		<ul>
 			
-			<li><a href="#"> Team</a></li>
+			<li><a href="#"> my Team</a></li>
 				<li><a href="#">contact</a></li>
 		</ul>
 				
@@ -215,8 +214,10 @@ label {
 	
 	</footer>
 	
+	<script src="main.js">
+		
+		</script>
 
-
-
+	
 </body>
 </html>
