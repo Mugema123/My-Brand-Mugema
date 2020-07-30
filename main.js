@@ -27,8 +27,8 @@ function validateForm() {
     }
     }
     
-    
- return false;
+    alert('thank you for contacting me!')
+ ///return false;
     }
     
     
