@@ -26,7 +26,9 @@ function validateForm() {
     }
     }
     }
-    return false;
+    
+    
+ return false;
     }
     
     
@@ -67,7 +69,7 @@ function validateForm() {
     //JavaScript code for validating email format
     function ValidateEmail(mail)
     {
-    var mailformat = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/;
+    var mailformat = /[0-9a-zA-Z]+@[0-9a-zA-Z]+[\.]{1}[0-9a-zA-Z]+[\.]?[0-9a-zA-Z]+/g;
     if(mail.value.match(mailformat))
     {
     return true;
@@ -100,7 +102,7 @@ function validateForm() {
     
     function message(text)
     { 
-    var area = /^[0-9a-zA-Z]+$/;
+    var area = /^[A-Za-z]+$/;
     if(text.value.match(area))
     {
     return true;
@@ -112,3 +114,4 @@ function validateForm() {
     return false;
     }
     }
+    
