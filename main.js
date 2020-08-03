@@ -26,8 +26,8 @@ function validateForm() {
     }
     }
     }
-    
-    alert('thank you for contacting me!')
+    window.location.href = "thank.html"
+    //alert('thank you for contacting me!')
  ///return false;
     }
     
