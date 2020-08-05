@@ -159,35 +159,35 @@ button a {
 			
 			<h1 >Contact us!</h1>
 	
-	<form name="myForm" action="thank.html"  method="get" onsubmit="return validateForm()" >
+	<form name="myForm" id="idForm"   method="post" onsubmit="return validateForm()" >
 	
 		<div class="control-form">
 			 <div>
 			<label for="firstName">First Name</label>
-			<input type="text"  name="firstName" placeholder="Enter your first name" >
+			<input type="text"  name="firstName" id="fname" placeholder="Enter your first name" >
 			  </div>
 	
 			  <div >
 			<label for="lastName">Last Name</label>
-			<input type="text" name="lastName" placeholder="Enter your last name" >
+			<input type="text" name="lastName" id="lname" placeholder="Enter your last name" >
 			 </div>
 	
 			  <div>
 			<label for="email">Email</label>
-			<input type="text" name="email" placeholder="Enter your email" >
+			<input type="text" name="email" id="email" placeholder="Enter your email" >
 			 </div>
 	
 			 <div>
 			<label for="phoneNumber">Phone Number</label>
-			<input type="text" name="phoneNumber" placeholder="Enter your phone number" >
+			<input type="text" name="phoneNumber" id="phone" placeholder="Enter your phone number" >
 			 </div>
 	
 			 <div>
 			<label for="textarea">Your message</label>
-			<textarea name="textarea"  rows="4" cols="20" name="comment" placeholder="Enter your message"> </textarea>
+			<textarea name="textarea" id="textar" rows="4" cols="20" name="comment" placeholder="Enter your message"> </textarea>
 			 </div>
 			  
-			<button type="submit" >Submit</button> 
+			<button type="submit" id="insert" >Submit</button> 
 			<input type="reset" value="Reset" name="Reset"> 
 	
 	
@@ -217,10 +217,18 @@ button a {
 	
 	</footer>
 	
-	<script src="main.js">
-		
-		</script>
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+<!--<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script> -->
 
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<!--<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script> -->
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+
+
+
+<script src="main.js"></script>
 	
 </body>
 </html>
