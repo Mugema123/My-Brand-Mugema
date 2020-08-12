@@ -60,7 +60,7 @@
 }
 
 form {
-	max-width:800px;
+	max-width:500px;
     background-color:#E5E5E5;
     margin:0 auto;
 	padding: 20px;
@@ -88,15 +88,18 @@ label {
 
 	
 }
-
+.control-form input [type= checkbox] {
+    float: left;
+    margin-top: 100px;
+}
 .control-form button{
 	margin-top: 10px;
 	background-color: #00AAFF;
 	font-size: 20px; 
 }
-button a {
-	text-decoration: none;
-	color: black;
+
+.control-form a{
+    text-decoration: none;
 }
 
 #footer {
@@ -146,8 +149,7 @@ button a {
 				<li><a href="signup.html">Register</a></li>
 				<li><a href="signin.html">Log-in</a></li>
 				<li><a href="contact.html">Contact</a></li>
-				<li><a href="blog.html">Blog</a></li>
-				<li><a href="#">My process</a></li>
+				<li><a href="#">Process</a></li>
 			</ul>
 	
 		</nav>
@@ -158,43 +160,40 @@ button a {
 		
 		<div id="main-session">
 			
-			<h1 >Contact us!</h1>
+			<h1>Register User-form</h1>
 	
-	<form name="myForm" id="idForm" onsubmit="return validation()"  method="POST"  >
-	                  
+	<form id="form2">
+	
 		<div class="control-form">
 			 <div>
-			<label for="firstName">First Name</label>
-			<input type="text"  name="firstName" id="fname" placeholder="Enter your first name" >
-			<span id="fusername" > </span>
+			<label>Full Name</label>
+	
+	
+			<input type="text" name="first name" placeholder="Enter your full name" required>
 			  </div>
 	
 			  <div >
-			<label for="lastName">Last Name</label>
-			<input type="text" name="lastName" id="lname" placeholder="Enter your last name" >
-			<span id="lusername" > </span>
+			<label>Email</label>
+			<input type="text" id="email-signup"  name="email" placeholder="Enter your Email" required>
 			 </div>
 	
 			  <div>
-			<label for="email">Email</label>
-			<input type="text" name="email" id="email" placeholder="Enter your email" >
-			<span id="emailids" > </span>
+			<label>Password</label>
+			<input type="text" id="passcode-signup" name="password" placeholder="Enter your Password" required>
 			 </div>
 	
 			 <div>
-			<label for="phoneNumber">Phone Number</label>
-			<input type="text" name="phoneNumber" id="phone" placeholder="Enter your phone number" >
-			<span id="mobileno" > </span>
+			<label>Repeat password</label>
+			<input type="text" name="password" placeholder="Repeat your password " required>
 			 </div>
 	
 			 <div>
-			<label for="textarea">Your message</label>
-			<textarea name="textarea" id="textar" rows="4" cols="20" name="comment" placeholder="Enter your message"> </textarea>
-			<span id="messagesid" > </span>
+                <input type="checkbox"  name="terms" value="terms">
+			<label><p>I have read and agree to <a href="#">terms and conditions</a></p></label>
+			
 			 </div>
 			  
-			<button type="submit"  name="submit" value="submit">Submit</button> 
-			<input type="reset" value="Reset" name="Reset"> 
+			<button type="submit"> Register</button>
 	
 	
 			
@@ -213,7 +212,7 @@ button a {
 	
 		<ul>
 			
-			<li><a href="#"> my Team</a></li>
+			<li><a href="#"> Team</a></li>
 				<li><a href="#">contact</a></li>
 		</ul>
 				
@@ -223,20 +222,15 @@ button a {
 	
 	</footer>
 	
-	<!-- The core Firebase JS SDK is always required and must be listed first -->
-<!--<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script> -->
-
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-
-
-<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script> 
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script> 
+    
+    
+    
+    <script src="signup.js"></script>
 
 
-
-<script src="main.js"></script>
-	
 </body>
 </html>
