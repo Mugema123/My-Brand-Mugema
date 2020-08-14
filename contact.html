@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Brand</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style >
     *{
     		margin: 0px;
@@ -78,7 +79,7 @@ label {
 	text-align: left;
 	margin-top:5px;
 }
-.control-form input, .control-form textarea ,.control-form button{
+.contact_form input, .contact_form textarea ,.contact_form button{
 
 	display: block;
 	width:100%;
@@ -89,12 +90,15 @@ label {
 	
 }
 
-.control-form button{
+.contact_form button{
 	margin-top: 10px;
 	background-color: #00AAFF;
 	font-size: 20px; 
 }
-
+button a {
+	text-decoration: none;
+	color: black;
+}
 
 #footer {
 	background-color: black;
@@ -131,7 +135,7 @@ label {
     </style>
 </head>
 
-<body>
+<body onload=" onlaudFunction()" >
 
 	<header class="nav">
 
@@ -143,6 +147,7 @@ label {
 				<li><a href="signup.html">Register</a></li>
 				<li><a href="signin.html">Log-in</a></li>
 				<li><a href="contact.html">Contact</a></li>
+				<li><a href="blog.html">Blog</a></li>
 				<li><a href="#">My process</a></li>
 			</ul>
 	
@@ -154,37 +159,58 @@ label {
 		
 		<div id="main-session">
 			
-			<h1 >Contact us!</h1>
-	
-	<form name="myForm"  action="/" onsubmit="return validateForm()" method="get">
-	
+			
+		<!--	<h1 class="contact_form-header">Contact Me</h1> -->
+
+			<form class="contact_form" id="idForm" >
+				<h1 class="contact_form-header">Contact Me</h1>
+				<h3 class="alert"></h3>
+				<input class="contact_input" type="text" required id="fname" placeholder="Type Your first Name"></br>
+				<input class="contact_input" type="text" required id="lname" placeholder="Type Your last Name"></br>
+				<input class="contact_input" type="email" required id="email" placeholder="type your email"></br>
+				<textarea id="textar" placeholder="type your message" required class="message" cols="30" rows="10"></textarea></br>
+				<button type="submit" class="button">Send</button>
+			</form>
+
+
+
+	<!--
+
+	<form name="myForm" id="idForm" class="contact_form"  >
+		
+        <h3 class="alert">Thank your for contacting me!</h3>     
 		<div class="control-form">
-			 <div>
-			<label for="firstName">First Name</label>
-			<input type="text"  name="firstName" placeholder="Enter your first name" >
-			  </div>
+			
+			
+			<input class="contact_input" type="text" required  id="fname" placeholder="Enter your first name" >
+			<span id="fusername" > </span> <br>
+			  
 	
-			  <div >
-			<label for="lastName">Last Name</label>
-			<input type="text" name="lastName" placeholder="Enter your last name" >
-			 </div>
+	  
+			
+			<input class="contact_input" type="text" required  id="lname" placeholder="Enter your last name" >
+			<span id="lusername" > </span><br>
+			 
 	
-			  <div>
-			<label for="email">Email</label>
-			<input type="text" name="email" placeholder="Enter your email" >
-			 </div>
+			 
+			
+			<input class="contact_input"  type="email" required  id="email" placeholder="Enter your email" >
+			<span id="emailids" > </span><br>
+			
 	
 			 <div>
 			<label for="phoneNumber">Phone Number</label>
-			<input type="text" name="phoneNumber" placeholder="Enter your phone number" >
+			<input type="text" name="phoneNumber" id="phone" placeholder="Enter your phone number" >
+			<span id="mobileno" > </span>
 			 </div>
 	
-			 <div>
-			<label for="textarea">Your message</label>
-			<textarea name="textarea"  rows="4" cols="20" name="comment" placeholder="Enter your message"> </textarea>
-			 </div>
+			 
+			
+			<textarea id="textar"  placeholder="type your message" required class="message" rows="4" cols="20"> </textarea>
+			<span id="messagesid" > </span><br>
+			 
 			  
-			<button type="submit" value="submit"> Submit</button>
+			<button type="submit"  class="button">Submit</button> 
 			<input type="reset" value="Reset" name="Reset"> 
 	
 	
@@ -192,7 +218,7 @@ label {
 	</div>
 	
 		</form>
-	
+	-->
 	
 	
 	
@@ -214,10 +240,20 @@ label {
 	
 	</footer>
 	
-	<script src="main.js">
-		
-		</script>
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+<!--<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script> -->
 
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script> 
+
+
+
+<script src="main.js"></script>
 	
 </body>
 </html>

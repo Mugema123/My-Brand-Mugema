@@ -1,114 +1,72 @@
-function validateForm() {
+var firebaseConfig = {
+   apiKey: "AIzaSyCSowyLOaWbzEkrDpqfxOsltEmj6PD7uNU",
+   authDomain: "personal-web-cbe9c.firebaseapp.com",
+   databaseURL: "https://personal-web-cbe9c.firebaseio.com",
+   projectId: "personal-web-cbe9c",
+   storageBucket: "personal-web-cbe9c.appspot.com",
+   messagingSenderId: "822165723878",
+   appId: "1:822165723878:web:49d84b415625d58847f927",
+   measurementId: "G-YW30PXMQS4"
+ };
+ // Initialize Firebase
+ firebase.initializeApp(firebaseConfig);
+ 
+ 
+ // Reference messages collection
+ let db = firebase.firestore();
+ 
+ 
+ 
+ console.log(db)
+
+
+
+
+
+
     
-    var fname= document.myForm.firstName;
-    var lname= document.myForm.lastName;
-    var mail= document.myForm.email;
-    var phone= document.myForm.phoneNumber;
-    var text= document.myForm.textarea;
-    
-    if(allLetter(fname))
-    {
-     
-    if(allLett(lname))
-    {
-    
-    if(ValidateEmail(mail))
-    {
-    if(allnumeric(phone))
-    {
-    
-    if(message(text))
-    {
-    
-     
-    }
-    }
-    }
-    }
-    }
-    return false;
-    }
-    
-    
-    //JavaScript code for validating firstname
-    
-    function allLetter(fname)
-    { 
-    var letters = /^[A-Za-z]+$/;
-    if(fname.value.match(letters))
-    {
-    return true;
-    }
-    else
-    {
-    alert('First name  must be filled out and have alphabet characters only');
-    fname.focus();
-    return false;
-    }
-    }
-    
-    //JavaScript code for validating lastname
-    
-    function allLett(lname)
-    { 
-    var let = /^[A-Za-z]+$/;
-    if(lname.value.match(let))
-    {
-    return true;
-    }
-    else
-    {
-    alert('last name  must be filled out and have alphabet characters only');
-    lname.focus();
-    return false;
-    }
-    }
-    
-    //JavaScript code for validating email format
-    function ValidateEmail(mail)
-    {
-    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    if(mail.value.match(mailformat))
-    {
-    return true;
-    }
-    else
-    {
-    alert("You have entered an invalid email address! (example@gmail.com)");
-    mail.focus();
-    return false;
-    }
-    }
-    
-    //JavaScript code for validating phone number
-    function allnumeric(phone)
-    { 
-    var numbers = /^[0-9]+$/;
-    if(phone.value.match(numbers))
-    {
-    return true;
-    }
-    else
-    {
-    alert('phone number must be filled out and have numeric characters only');
-    phone.focus();
-    return false;
-    }
-    }
-    
-    //JavaScript code for validating textarea
-    
-    function message(text)
-    { 
-    var area = /^[A-Za-z]+$/;
-    if(text.value.match(area))
-    {
-    return true;
-    }
-    else
-    {
-    alert('textarea  must be filled out and have alphabet characters only');
-    text.focus();
-    return false;
-    }
-    }
+ //Extract Element from form
+  // Listen for form submit
+  function  onlaudFunction(){
+   var form=document.getElementById('idForm');
+   form.addEventListener('submit',send);
+ }
+ 
+ 
+ 
+ function send(e) {
+   e.preventDefault();
+ 
+   var name=getInput('fname');
+   var laname=getInput('lname');
+   var email=getInput('email');
+   var message=getInput('textar');
+  
+  db.collection("contatc").add({
+          name:name,
+          laname:laname,
+          email:email,
+          message:message
+  })
+  
+  document.querySelector('.alert').style.display='none';
+  
+  setTimeout(() => {
+    document.querySelector('.alert').style.display='none';
+  },3000 );
+  
+  document.getElementById('idForm').reset();
+ window.alert("Thank you for contatcing me, I will get back to you shortly");
+  db.collection("contatc").get().then(function(snapshot){
+    snapshot.forEach(function (doc){
+        console.log(doc.data());
+    });
+  })
+ }
+ 
+ 
+  
+ 
+ function getInput(id){
+   return document.getElementById(id).value;
+ }

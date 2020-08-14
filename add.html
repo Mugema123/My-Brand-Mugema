@@ -60,7 +60,7 @@
 }
 
 form {
-	max-width:500px;
+	max-width:800px;
     background-color:#E5E5E5;
     margin:0 auto;
 	padding: 20px;
@@ -88,18 +88,15 @@ label {
 
 	
 }
-.control-form input [type= checkbox] {
-    float: left;
-    margin-top: 100px;
-}
+
 .control-form button{
 	margin-top: 10px;
 	background-color: #00AAFF;
 	font-size: 20px; 
 }
-
-.control-form a{
-    text-decoration: none;
+button a {
+	text-decoration: none;
+	color: black;
 }
 
 #footer {
@@ -144,12 +141,10 @@ label {
 		<nav class="nav-link">
 			
 			<ul>
-				<li><a href="index.html">Home</a></li> 
-				<li><a href="About.html">About</a></li>
-				<li><a href="signup.html">Register</a></li>
-				<li><a href="signin.html">Log-in</a></li>
-				<li><a href="contact.html">Contact</a></li>
-				<li><a href="#">Process</a></li>
+				
+				
+				<li><a href="blog.html">Blog</a></li>
+				
 			</ul>
 	
 		</nav>
@@ -160,40 +155,32 @@ label {
 		
 		<div id="main-session">
 			
-			<h1>Register User-form</h1>
+			<h1 >New Post</h1>
 	
-	<form id="form2">
+	<form name="myForm" id="idForm"   method="post"  >
 	
 		<div class="control-form">
 			 <div>
-			<label>Full Name</label>
-	
-	
-			<input type="text" name="first name" placeholder="Enter your full name" required>
+			<label for="heading">Title</label>
+			<input type="text"  name="heading" id="heading" placeholder="Enter the title of a post" >
 			  </div>
 	
 			  <div >
-			<label>Email</label>
-			<input type="text" id="email-signup"  name="email" placeholder="Enter your Email" required>
+			<label for="date">Writer</label>
+			<input type="text" name="date" id="date" placeholder="Enter date" >
 			 </div>
 	
-			  <div>
-			<label>Password</label>
-			<input type="text" id="passcode-signup" name="password" placeholder="Enter your Password" required>
-			 </div>
-	
-			 <div>
-			<label>Repeat password</label>
-			<input type="text" name="password" placeholder="Repeat your password " required>
-			 </div>
-	
-			 <div>
-                <input type="checkbox"  name="terms" value="terms">
-			<label><p>I have read and agree to <a href="#">terms and conditions</a></p></label>
-			
-			 </div>
 			  
-			<button type="submit"> Register</button>
+	
+			 
+	
+			 <div>
+			<label for="textarea">New Post</label>
+			<textarea name="textarea" id="text" rows="20" cols="20" name="comment" placeholder="Enter a new post"> </textarea>
+			 </div>
+			
+			<button type="submit" >Submit</button> 
+			<input type="reset" value="Reset" name="Reset"> 
 	
 	
 			
@@ -212,8 +199,8 @@ label {
 	
 		<ul>
 			
-			<li><a href="#"> Team</a></li>
-				<li><a href="#">contact</a></li>
+			<li><a href="#"> To my blog</a></li>
+				
 		</ul>
 				
 				
@@ -222,15 +209,20 @@ label {
 	
 	</footer>
 	
-    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script> 
-    
-    
-    
-    <script src="signup.js"></script>
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+<!--<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script> -->
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
 
 
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script> 
+
+
+
+<script src="blog.js"></script>
+	
 </body>
 </html>
